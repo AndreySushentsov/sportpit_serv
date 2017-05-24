@@ -1,0 +1,11 @@
+-var navigation_items = [{url:'/about', menu:'Обо мне'},{url:'/programms', menu:'Программы тренировок'},{url:'/products', menu:'Спортпит'},{url:'/contacts', menu:'Контакты'}]
+a(href='/')
+  h1.nav__logo stortpit-nt
+ul.nav__list
+  each item in navigation_items
+    li.nav__item
+      a(href=item.url).nav__link=item.menu
+.nav__burger
+  .bar1
+  .bar2
+  .bar3

@@ -1,0 +1,14 @@
+- var contacts = [{icon:'fa fa-map-marker', descr:'adress'},{icon:'fa fa-phone', descr:'8 000 00 00 000'},{icon:'fa fa-envelope-o', descr:'mymail@mail.com'},{icon:'fa fa-vk', descr:'sportpit-nt'}]
+- var navigation = [{url:'about.html', menu:'Обо мне'},{url:'products.html', menu:'Продукция'},{url:'programms.html', menu:'Программы тренировок'},{url:'contacts.html', menu:'Контакты'}]
+.l-contacts__container
+  ul.c-contacts__list
+    each contact in contacts
+      li.c-contacts__item
+        .c-contacts__icon-wrapper
+          i(class=contact.icon aria-hidden="true").c-contacts__icon
+        .c-contacts__descr=contact.descr
+.l-footer-menu__container
+  ul.c-footer-menu__list
+    each item in navigation
+      li.c-footer-menu__item
+        a(href=item.url).c-footer-menu__link=item.menu

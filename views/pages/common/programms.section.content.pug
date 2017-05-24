@@ -1,0 +1,20 @@
+.l-content__wrapper
+  .l-content__sidebar
+    .c-categories__menu
+      each item in programm
+        a(href='#' id=`${item.sex}`).c-categories__item=item.gender
+  .l-content__content
+    each item in programm
+      div(class=`${item.sex}`).c-programms__category-container
+          h2.c-programms__category-title=item.gender
+          p.c-programms__category-notification Нужно понимать, что программа тренировок, подбирается индивидуально для каждого и зависит от многих факторов (опыт, наличие травм в прошлом, возраст и т.д) Так же результат во многом зависит от правельного и сбалансированного питания. Представленные программы рассчитаны на людей с небольшой физической подготовкой, которые только начали заниматься. Более подробную информацию или консультацию по программам тренировок и питанию можно получить написав в группу в <i>vk</i> или мне в личку.
+          .c-programms__category-menu
+            ul.c-programms__category-list
+              each cat in item.category
+                li.c-programms__category-item
+                  a(herf='#' id=`${cat.category_id}`).c-programms__category-anchor=cat.category_button
+          .c-programms__category-content
+            each prog in item.category
+              div(class=`${prog.category_id}`).c-programms__programms=prog.programm
+  
+            

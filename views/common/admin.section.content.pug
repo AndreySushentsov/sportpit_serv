@@ -1,0 +1,13 @@
+.form__container
+  form.form#upload(action='/admin' method="POST" enctype="multipart/form-data")
+      h2.form__subtitle Загрузите картинку на сервер
+      .status
+      label.form__input-line
+          input(name="name" type="text" placeholder="Описание картинки").form__input#file-desc
+      </br>
+      label.form__input-line
+          input(name="photo" type="file" required accept="image/*").form__input#file-select
+      .form__btns
+          input(name="" type="submit" value="Отправить").form__btn-send
+          input(name="" type="reset" value="Очистить").form__btn-reset
+a(href='/admin/addpost') Добавить запись в блог

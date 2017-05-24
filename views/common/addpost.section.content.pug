@@ -1,0 +1,12 @@
+.form__container
+  form.form#upload( method="POST")
+      h2.form__subtitle Добавить запись в блог
+      .status
+      label.form__input-line
+          input(name="title" type="text" placeholder="Заголовок").form__input#file-desc
+      </br>
+      label.form__input-line
+          textarea(name="text" type="text" required).form__input#file-select
+      .form__btns
+          input(name="" type="submit" value="Отправить").form__btn-send
+          input(name="" type="reset" value="Очистить").form__btn-reset

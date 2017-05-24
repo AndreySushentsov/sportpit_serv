@@ -1,0 +1,11 @@
+# NodeJS
+node_modules
+
+# Folders
+build
+gulp
+source
+
+# Files
+gulpfile.js
+.eslintrc

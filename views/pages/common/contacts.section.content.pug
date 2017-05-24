@@ -1,0 +1,18 @@
+.l-contacts__wrapper
+  .c-contacts__container
+    h2.c-contacts__title Обратная связь
+    p.c-contacts__description Вопросы и предложения можно отправить через форму обратной связи ниже:
+    form.c-form
+      .c-form__row
+        .c-form__field
+          input(id="name" type="text" required).c-form__input
+          label(for="name").c-form__label Ваше имя
+        .c-form__field
+          input(id="email" type="email" required).c-form__input
+          label(for="email").c-form__label Ваш e-mail
+      .c-form__row
+        .c-form__textarea
+          textarea(id="message" required).c-form__input
+          label(for="message").c-form__label Ваше сообение
+      .c-form__field.c-form__field_submit 
+        input(type="submit" value="Отправить")

@@ -1,0 +1,19 @@
+.bg-color
+video(autoplay loop).bg-video
+  <source src='/img/bg_video.mp4' type="video/mp4">
+img(src='/img/bg1_img.jpg').bg-img
+
+
+
+- var slides = [{ slide : 1, title : 'Набор Массы и рост рабочих весов', description : 'Силовая тренировка: Ваша цель', link : 'программа тренировок'}, { slide : 2, title : 'Жиросжигание, проработка рельефа', description : 'Аэробная тренировка: Ваша цель', link : 'программа тренировок'},  { slide : 3, title : 'Повысить уровень выносливости  и тонуса', description : 'Кардио тренировка: Ваша цель', link : 'программа тренировок'}];
+
+mixin slider(slide)
+  div(class=`c-slider${slide.slide}`).c-slider__content.fade
+    h4.c-slider__descr=slide.description
+    h2.c-slider__header=slide.title
+    a(href='/programms').c-slider__link выбрать программу тренировок
+.l-slider
+  .c-slider__group
+
+  for slide in slides
+    +slider(slide)

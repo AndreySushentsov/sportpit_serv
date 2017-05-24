@@ -1,0 +1,19 @@
+-var products = [ {category :'Protein', image :['protein_1','protein_2','protein_3','protein_4','protein_5','protein_6','protein_7','protein_8','protein_9']},{category :'BCAA',image :['bcaa_1','bcaa_2','bcaa_3']},{category :'TITAN_Complex',image :['complex_titan_1','complex_titan_2','complex_titan_3','complex_titan_4','complex_titan_5']}]
+.l-content__wrapper
+  div(id='scrollSpy').l-content__sidebar
+    .c-categories__menu
+      each product in products
+        a(href=`#${product.category}`).c-categories__item=product.category
+  .l-content__content
+    ul.c-products__list
+      each product in products
+        li.c-products__item
+          div(id=product.category).c-products__title=product.category
+          .c-products__content
+            each image in product.image
+              .c-card__container
+                .c-card__front 
+                  .c-card__overlay Подробнee
+                  img(src=`/img/${image}.jpg`).c-card__image
+                .c-card__back
+                  h2 skdhglks
